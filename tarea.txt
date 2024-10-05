@@ -15,11 +15,7 @@ Responsividad y UX:
 El producto debe ser full responsive, ofreciendo una experiencia de usuario intuitiva, ágil y accesible en todas las resoluciones.
 Buenas Prácticas:
 
-.color1 {color: #0091f7;}
-.color2 {color: #00bcff;}
-.color3 {color: #2defff;}
-.color4 {color: #a1ffff;}
-.color5 {color: #e9ffff;}
+
 
 Requisitos Mínimos
 Header:

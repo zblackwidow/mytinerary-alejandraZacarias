@@ -10,7 +10,7 @@ export default function Carrousel() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -46,22 +46,24 @@ export default function Carrousel() {
     // autoplay: true,
     // autoplaySpeed: 3000,
   return (
-    <> <div className="w-3/4 m-auto">
+    <> <div className="w-[80%] m-auto text-white ">
        <div className="mt-20">
         <Slice {...settings}>
         {images.map((d)=> (
             <>
-            <div  className=" bg-color1 h-[450px] text-black rounded-xl">
-                <div className="rounded-t-xl flex justify-center bg-violet-500items-center">
-                    <img src={d.url} alt={d.name} className="h-96 w-96 rounded-lg" />
+            <div>
+            <div>
+                <div className=" rounded-2xl  flex justify-center items-center">
+                    <img src={d.url} alt={d.name} className=" rounded-2xl" />
                 </div>
             </div>
             <div>
-                <div className="flex flex-col justify-center items-center gap-4 p-4 bg-yellow-300 ">
-                    <p className="text-xl font-semibold">{d.city}</p>
-                    <p>{d.descripcion}</p>
-                    <button className="bg-slate-900 text-white text-lg px-6 py1 rounded-xl">Go</button>
+                <div className="rounded-b-3xl flex flex-col justify-center items-center gap-4 p-4  ">
+                    <p className="bg-transparent text-xl font-semibold">{d.name}</p>
+                    <p className="bg-transparent">{d.descripcion}</p>
+                    <button className="bg-blue-900 text-white text-lg px-6 py1 rounded-2xl">Visit</button>
                 </div>
+            </div>
             </div>
             </>
         ))}
@@ -121,7 +123,7 @@ const images = [
     {
       "name": "Lima, Perú",
       "url": "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
-      "descripcion": "Conocida por su gastronomía de clase mundial y rica historia colonial."
+      "descripcion": "Conocida por su gastronomía de clase mundial y rica historia colonial. El mejor destino para disfrutar."
     },
     {
       "name": "Berlín, Alemania",
@@ -131,7 +133,7 @@ const images = [
     {
       "name": "Copenhague, Dinamarca",
       "url": "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
-      "descripcion": "Conocida por su diseño escandinavo, canales y ambiente acogedor."
+      "descripcion": "Conocida por su diseño escandinavo, canales y ambiente acogedor.El mejor destino para disfrutar."
     },
     {
       "name": "Buenos Aires, Argentina",

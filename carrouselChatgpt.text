@@ -1,0 +1,44 @@
+import React from "react";
+import Slice from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+export default function Carrousel() {
+    const settings = {
+        accessibility: true,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    };
+
+    return (
+        <div className="w-3/4 m-auto mt-20">
+            <h2 className="text-center text-2xl font-bold">Popular Itineraries</h2>
+            <Slice {...settings}>
+                {images.map((slide, index) => (
+                    <div key={index} className="flex justify-around">
+                        {slide.map((d, imgIndex) => (
+                            <div key={imgIndex} className="bg-violet-400 h-[450px] text-black rounded-xl flex flex-col items-center">
+                                <img src={d.url} alt={d.name} className="h-96 w-96 rounded-lg" />
+                                <p className="text-xl font-semibold">{d.name}</p>
+                                <p>{d.descripcion}</p>
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </Slice>
+        </div>
+    );
+}
+Explicación del Código
+Array de Imágenes: Creamos un array images que contiene 3 arrays, cada uno representando una slide con 4 ciudades.
+
+Configuración del Carrusel: En settings, definimos las configuraciones para el carrusel, como la cantidad de slides que se deben mostrar.
+
+Renderizado: Usamos map para recorrer las slides y luego cada ciudad dentro de cada slide. Asignamos una key única para cada slide y cada ciudad para evitar advertencias de React.
+
+Estilos: Se aplican clases de Tailwind CSS para estilizar los componentes.
