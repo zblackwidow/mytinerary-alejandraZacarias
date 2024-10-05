@@ -1,20 +1,19 @@
-import './App.css'
-import Home from './Pages/Home'
-import Cities from './Pages/Cities'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import "./App.css";
+import Home from "./Pages/Home";
+import Cities from "./Pages/Cities";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter ([
-  {path: '/', element: <Home/> },
-  {path: '/cities', element: <Cities/>}
-])
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  { path: "/cities", element: <Cities /> },
+]);
 
 function App() {
-
   return (
     <>
-       <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

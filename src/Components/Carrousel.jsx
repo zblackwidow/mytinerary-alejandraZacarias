@@ -46,17 +46,16 @@ export default function Carrousel() {
     // autoplay: true,
     // autoplaySpeed: 3000,
   return (
-    <> <div className="w-[80%] m-auto text-white ">
-       <div className="mt-20">
+    <> <div className="w-[80vw] m-auto text-white ">
+       
         <Slice {...settings}>
         {images.map((d)=> (
             <>
-            <div>
-            <div>
-                <div className=" rounded-2xl  flex justify-center items-center">
-                    <img src={d.url} alt={d.name} className=" rounded-2xl" />
+            {/* div central */}
+            <div className="bg-black rounded-xl">
+                <div className=" flex justify-center items-center">
+                    <img src={d.url} alt={d.name} className=" rounded-t-2xl" />
                 </div>
-            </div>
             <div>
                 <div className="rounded-b-3xl flex flex-col justify-center items-center gap-4 p-4  ">
                     <p className="bg-transparent text-xl font-semibold">{d.name}</p>
@@ -68,7 +67,7 @@ export default function Carrousel() {
             </>
         ))}
         </Slice>
-        </div> 
+        
     </div>
     </>
   );
