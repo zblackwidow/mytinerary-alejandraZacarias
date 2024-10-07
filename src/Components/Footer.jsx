@@ -1,26 +1,34 @@
+<<<<<<< HEAD
+=======
+import { Link } from "react-router-dom";
+>>>>>>> b70a98540d96550c44832a11bce5570f407d2901
 
 export default function Footer() {
   return (
     <>
-      <footer className="h-[40vh] flex-col flex md:flex-row md:justify-around justify-center items-center  bg-slate-950 text-slate-400">
-        <div className="p-16">
-          <p className="text-xl font-bold text-white">MyTinerary</p>
-          <p className="text-lg ">
-            Find your perfect trip, designed by insiders who know and love their
-            cities!
-          </p>
+      <footer className="h-[40vh] flex-col flex md:flex-row justify-around items-center  bg-slate-950 text-slate-400">
+        <div>
+          <p className="text-xl font-bold md:m-0 mb-8 text-white">MyTinerary</p>
+          <ul className="flex gap-8 text-xl ">
+            <li className="hover:text-pink-400">
+            <Link to="/cities">Cities</Link>
+            </li>
+            <li className="hover:text-pink-400">
+              <Link  to="/">Home</Link>
+            </li>
+          </ul>
         </div>
         <div>
           <p className="text-xl font-bold">Follow us</p>
           <ul className="flex gap-4 text-xl">
             <li className="hover:text-pink-400">
-              <a href="#">Instagram</a>
+              <Link to="/">Instagram</Link>
             </li>
             <li className="hover:text-pink-400">
-              <a href="#">Facebook</a>
+             <Link to="/">Facebook</Link>
             </li>
             <li className="hover:text-pink-400">
-              <a href="#">Twitter</a>
+              <Link to="/">Twitter</Link>
             </li>
           </ul>
         </div>
