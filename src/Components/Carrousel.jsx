@@ -51,6 +51,7 @@ export default function Carrousel() {
   return (
     <>
       <div className="w-[80vw] max-[740px]:mt-[15%] m-auto text-white">
+
         <h1 className="text-center font-sans text-3xl font-bold mb-9 underline decoration-sky-500">
           Popular MyTineraries
         </h1>
