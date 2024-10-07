@@ -17,7 +17,6 @@ export default function Cities() {
         <div className="w-full md:h-[80vh] flex flex-col items-center justify-center">
         <div className=" flex flex-col items-center text-white justify-center">
           <h1 className="text-center text-4xl font-bold">Cities</h1>
-          <p className="text-center text-2xl">Coming soon</p>
         </div>
         
         <div className="w-[85vw] h-full my-4 items-center flex flex-wrap text-white justify-center">
