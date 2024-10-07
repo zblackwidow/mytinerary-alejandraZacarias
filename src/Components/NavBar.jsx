@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from "react";
+import { useState } from "react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,6 @@ export default function NavBar() {
   return (
     <>
       <nav className="bg-transparent text-lg h-[9vh] flex justify-around text-white items-center">
-
         <div className="flex items-center">
           <a href="#">
             <img
@@ -24,13 +23,17 @@ export default function NavBar() {
           onClick={toggleMenu}
           className="md:hidden w-auto flex flex-col justify-between  items-center focus:outline-none"
         >
-          <div className ="h-1 w-5 bg-white mb-1"></div>
+          <div className="h-1 w-5 bg-white mb-1"></div>
           <div className="h-1 w-5 bg-white mb-1"></div>
           <div className="h-1 w-5 bg-white mb-1"></div>
         </button>
 
         {/* Menú desplegable */}
-        <div className={`absolute w-full text-xl bg-black bg-opacity-30 transition-transform ${isOpen ? 'translate-y-28' : '-translate-y-full'} md:hidden`}>
+        <div
+          className={`absolute w-full text-xl bg-black bg-opacity-30 transition-transform ${
+            isOpen ? "translate-y-28" : "-translate-y-full"
+          } md:hidden`}
+        >
           <ul className="flex items-center flex-col text-white p-4">
             <li className="hover:border-2 hover:px-8 p-2 hover:text-pink-400">
               <a href="#">Home</a>
@@ -63,6 +66,3 @@ export default function NavBar() {
     </>
   );
 }
-
-// https://cdn-icons-png.flaticon.com/512/15218/15218567.png
-// https://cdn-icons-png.flaticon.com/512/6676/6676023.png

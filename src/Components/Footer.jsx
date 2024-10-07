@@ -3,20 +3,29 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <footer className="h-auto flex justify-between  bg-gradient-to-r from-slate-900 to-slate-900 text-white">
-        <div className="ml-4 mt-4">
-          <p className="text-xl text-slate-800 font-bold">MyTinerary <br /> © 2024</p>
+      <footer className="h-[40vh] flex-col flex md:flex-row md:justify-around justify-center items-center  bg-slate-950 text-slate-400">
+        <div className="p-16">
+          <p className="text-xl font-bold text-white">MyTinerary</p>
+          <p className="text-lg ">
+            Find your perfect trip, designed by insiders who know and love their
+            cities!
+          </p>
         </div>
-        <div className="m-6 text-slate-600 flex flex-col items-end">
-          <h2>Redes</h2>
-          <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
+        <div>
+          <p className="text-xl font-bold">Follow us</p>
+          <ul className="flex gap-4 text-xl">
+            <li className="hover:text-pink-400">
+              <a href="#">Instagram</a>
+            </li>
+            <li className="hover:text-pink-400">
+              <a href="#">Facebook</a>
+            </li>
+            <li className="hover:text-pink-400">
+              <a href="#">Twitter</a>
+            </li>
           </ul>
         </div>
       </footer>
-     
     </>
   );
 }

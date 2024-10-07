@@ -45,31 +45,27 @@ export default function Carrousel() {
   // autoplaySpeed: 3000,
   return (
     <>
-      <div className="w-[80vw] max-[740px]:mt-[15%] m-auto text-white ">
-        <Slice {...settings}>
-          {images.map((d) => (
-            <>
-              {/* div central */}
-              <div className="bg-black bg-opacity-80 rounded-xl">
-                <div className=" flex justify-stretch rounded-xl items-center">
-                  <img src={d.url} alt={d.name} className=" rounded-t-2xl" />
-                </div>
-                <div className="flex flex-col justify-center items-center p-4 ">
-                  <div className="rounded-b-xl h-56 flex flex-col  items-center justify-center gap-3 w-[90%]">
-                    <p className="bg-transparent text-xl font-semibold">
-                      {d.name}
-                    </p>
-                    <p className="bg-transparent">{d.descripcion}</p>
-                    <button className="bg-blue-900 text-white text-lg px-6 py1 rounded-2xl">
-                      Visit
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </>
-          ))}
-        </Slice>
+      <div className="w-[80vw] max-[740px]:mt-[15%] m-auto text-white">
+  <Slice {...settings}>
+    {images.map((d) => (
+      <div className="bg-black bg-opacity-80 rounded-xl mb-10 " key={d.id}>
+        <div className="h-56 flex justify-stretch rounded-t-xl items-center">
+          <img src={d.url} alt={d.name} className="rounded-t-xl object-cover h-full w-full" />
+        </div>
+        <div className="flex flex-col justify-center items-center p-4">
+          <div className="rounded-b-xl h-56 flex flex-col items-center justify-center gap-3 w-[90%]">
+            <p className="bg-transparent text-xl font-semibold">{d.name}</p>
+            <p className="bg-transparent">{d.descripcion}</p>
+            <button className="bg-blue-900 bg-opacity-75 hover:bg-blue-400 text-white text-lg px-6 py-1 rounded-2xl">
+              Discover!
+            </button>
+          </div>
+        </div>
       </div>
+    ))}
+  </Slice>
+</div>
+
     </>
   );
 }
@@ -81,75 +77,75 @@ export default function Carrousel() {
 const images = [
   {
     name: "Tokio, Japón",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://media.admagazine.com/photos/618a5ef1be961b98e9f09804/master/w_1600%2Cc_limit/91686.jpg",
     descripcion:
-      "Una metrópoli vibrante que combina tradición y modernidad, famosa por su gastronomía, tecnología y cultura pop.",
+      "A vibrant metropolis that combines tradition and modernity, famous for its gastronomy, technology and pop culture.",
   },
   {
     name: "Barcelona, España",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZhG6NwwlPfqeZXadLK1XzXyCmJKWNkR_MSw&s",
     descripcion:
-      "Conocida por su arquitectura única de Gaudí, playas y una rica vida cultural y gastronómica.",
+      "Known for its unique Gaudí architecture, beaches and a rich cultural and gastronomic life.",
   },
   {
     name: "Nueva York, EE.UU.",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://media.admagazine.com/photos/61e5acc706c10ae95c71b902/16:9/w_2560%2Cc_limit/New-York-skyline.jpg",
     descripcion:
-      "La ciudad que nunca duerme, famosa por sus rascacielos, Broadway, museos y diversidad cultural.",
+      "The city that never sleeps, famous for its skyscrapers, Broadway, museums, and cultural diversity.",
   },
   {
     name: "París, Francia",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbo-vIfVjh-kezUFRNpSwrrkNFikeVEF1WQ&s",
     descripcion:
-      "La ciudad del amor, conocida por sus monumentos icónicos, arte y exquisita gastronomía.",
+      "The city of love, known for its iconic monuments, art and exquisite gastronomy.",
   },
   {
     name: "Sídney, Australia",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRphk1lpOJChnm27I3cTcErJs2lBvluv8Dw&s",
     descripcion:
-      "Famosa por su Ópera y hermosas playas, Sídney ofrece una mezcla de naturaleza y vida urbana.",
+      "Famous for its Opera and beautiful beaches, Sydney offers a mix of nature and urban life.",
   },
   {
     name: "Kioto, Japón",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://estaticos-cdn.prensaiberica.es/clip/a1767182-90e0-402e-9f29-e29ac48a2e7c_alta-aspect-ratio_default_0.jpg",
     descripcion:
-      "Una ciudad histórica conocida por sus templos, jardines tradicionales y cultura japonesa.",
+      "A historical city known for its temples, traditional gardens, and Japanese culture.",
   },
   {
     name: "Cape Town, Sudáfrica",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/10/2e/1e/cape-town.jpg?w=1200&h=700&s=1",
     descripcion:
-      "Con vistas de la montaña de la Mesa, ofrece una mezcla de historia, cultura y naturaleza.",
+      "With views of the Mesa mountain, it offers a mix of history, culture and nature.",
   },
   {
     name: "Reykjavik, Islandia",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://content.icelandtravel.is/wp-content/uploads/2019/03/Reykjavik.jpg",
     descripcion:
-      "La capital más septentrional del mundo, famosa por sus paisajes naturales y cultura vibrante.",
+      "The northernmost capital in the world, famous for its natural landscapes and vibrant culture.",
   },
   {
     name: "Lima, Perú",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://www.clarin.com/2022/12/02/Kl5Kzlrvm_2000x1500__1.jpg",
     descripcion:
-      "Conocida por su gastronomía de clase mundial y rica historia colonial. El mejor destino para disfrutar.",
+      "Known for its world-class gastronomy and rich colonial history. The best destination to enjoy.",
   },
   {
     name: "Berlín, Alemania",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://viajes.nationalgeographic.com.es/medio/2017/02/09/shutterstock-302415089_6b607cdb.jpg",
     descripcion:
-      "Una ciudad con una rica historia, arte contemporáneo y una vibrante vida nocturna.",
+      "A city with a rich history, contemporary art and a vibrant nightlife.",
   },
   {
     name: "Copenhague, Dinamarca",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://www.civitatis.com/blog/wp-content/uploads/2019/09/shutterstock_378539728-1920x1280.jpg",
     descripcion:
-      "Conocida por su diseño escandinavo, canales y ambiente acogedor.El mejor destino.",
+      "Known for its Scandinavian design, canals and cozy atmosphere.The best destination.",
   },
   {
     name: "Buenos Aires, Argentina",
-    url: "https://imgs.search.brave.com/hMYOlfQGpyRDEzoM6pGlqgz0aih1Srdn7bSUpgK9mZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9sYS1jaXVk/YWQtZGUtYnVlbm9z/LWFpcmVzLWVuLTEw/MC1hbm9zLWRlLWFj/dWVyZG8tNk01NzZW/N1RJQkRUTFA2U0lZ/VUJZVkdUSkkuamZp/Zj9hdXRoPWY5MDE5/YWJjMjc4YTg2MmM1/MDgwOGQ3ZjQwZjNi/ZGExYTFmM2YzZGM2/NGM4NWJkMDIzZDY2/ODlmYTMyOTFjODEm/d2lkdGg9NDIwJmhl/aWdodD00MjAmcXVh/bGl0eT03MCZzbWFy/dD10cnVl",
+    url: "https://blogskystorage.s3.amazonaws.com/2021/07/skyairline_skyairline_image_182.jpeg",
     descripcion:
-      "Famosa por su cultura del tango, arquitectura europea y deliciosa gastronomía.",
+      "Famous for its tango culture, European architecture and delicious gastronomy.",
   },
 ];
 
