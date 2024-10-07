@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 import { Link } from "react-router-dom";
->>>>>>> b70a98540d96550c44832a11bce5570f407d2901
+
 
 export default function Footer() {
   return (

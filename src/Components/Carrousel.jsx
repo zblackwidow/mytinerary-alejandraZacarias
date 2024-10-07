@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> b70a98540d96550c44832a11bce5570f407d2901
 import Slice from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -54,23 +51,6 @@ export default function Carrousel() {
   return (
     <>
       <div className="w-[80vw] max-[740px]:mt-[15%] m-auto text-white">
-<<<<<<< HEAD
-  <Slice {...settings}>
-    {images.map((d) => (
-      <div className="bg-black bg-opacity-80 rounded-xl mb-10 " key={d.id}>
-        <div className="h-56 flex justify-stretch rounded-t-xl items-center">
-          <img src={d.url} alt={d.name} className="rounded-t-xl object-cover h-full w-full" />
-        </div>
-        <div className="flex flex-col justify-center items-center p-4">
-          <div className="rounded-b-xl h-56 flex flex-col items-center justify-center gap-3 w-[90%]">
-            <p className="bg-transparent text-xl font-semibold">{d.name}</p>
-            <p className="bg-transparent">{d.descripcion}</p>
-            <button onClick={() => handleClick("/cities")} className="bg-blue-900 bg-opacity-75 hover:bg-blue-400 text-white text-lg px-6 py-1 rounded-2xl">
-              Discover!
-            </button>
-          </div>
-        </div>
-=======
         <h1 className="text-center font-sans text-3xl font-bold mb-9 underline decoration-sky-500">
           Popular MyTineraries
         </h1>
@@ -104,7 +84,6 @@ export default function Carrousel() {
             </div>
           ))}
         </Slice>
->>>>>>> b70a98540d96550c44832a11bce5570f407d2901
       </div>
     </>
   );
