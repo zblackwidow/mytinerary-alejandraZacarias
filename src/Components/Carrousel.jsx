@@ -2,8 +2,13 @@ import React from "react";
 import Slice from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Carrousel() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/cities");
+  };
   const settings = {
     accessibility: true,
     dots: true,
@@ -56,7 +61,7 @@ export default function Carrousel() {
           <div className="rounded-b-xl h-56 flex flex-col items-center justify-center gap-3 w-[90%]">
             <p className="bg-transparent text-xl font-semibold">{d.name}</p>
             <p className="bg-transparent">{d.descripcion}</p>
-            <button className="bg-blue-900 bg-opacity-75 hover:bg-blue-400 text-white text-lg px-6 py-1 rounded-2xl">
+            <button onClick={() => navigate("/cities")} className="bg-blue-900 bg-opacity-75 hover:bg-blue-400 text-white text-lg px-6 py-1 rounded-2xl">
               Discover!
             </button>
           </div>

@@ -1,5 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
+const routes = [
+  { to: "/", text: "Home" },
+  { to: "/cities", text: "Cities" },
+];
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,24 +41,24 @@ export default function NavBar() {
           } md:hidden`}
         >
           <ul className="flex items-center flex-col text-white p-4">
-            <li className="hover:border-2 hover:px-8 p-2 hover:text-pink-400">
-              <a href="#">Home</a>
-            </li>
-            <li className="py-2 hover:border-2 hover:px-8 hover:text-pink-400">
-              <a href="#">Cities</a>
-            </li>
+            {routes.map((route, index) => (
+              <li className="hover:border-2 hover:px-8 p-2 hover:text-pink-400" key={index}>
+                <NavLink to={route.to} className={({ isActive }) => (isActive ? 'text-pink-400' : 'hover:text-pink-400')}>{route.text}</NavLink>
+              </li>
+            ))}
             <li className="py-2 hover:border-2 hover:px-8 hover:text-pink-400">
               <a href="#">Login</a>
-            </li>
+            </li> 
           </ul>
         </div>
         <ul className="flex max-[740px]:hidden font-serif gap-6 text-white items-center">
-          <li className="hover:text-pink-400 ">
-            <a href="#">Home</a>
-          </li>
-          <li className="hover:text-pink-400">
-            <a href="#">Cities</a>
-          </li>
+        
+        {routes.map((route, index) => (
+              <li className="hover:text-pink-400" key={index}>
+                <NavLink to={route.to} className={({ isActive }) => (isActive ? 'text-pink-400' : 'hover:text-pink-400 ')}>{route.text}</NavLink>
+              </li>
+            ))}
+
         </ul>
         <button className="flex max-[740px]:hidden justify-between w-28 items-center hover:brightness-90 rounded-3xl">
           <img
