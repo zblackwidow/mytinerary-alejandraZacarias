@@ -3,7 +3,7 @@ Repositorio GitHub:
 
 Cree un repositorio público en GitHub con el nombre mytinerary-nombreApellido. DONE 
 El repositorio debe ser actualizado (pusheado) antes del horario de entrega.
- Los mentores evaluarán el estado del repositorio en ese momento.
+Los mentores evaluarán el estado del repositorio en ese momento.
 Se recomienda hacer commits diarios para familiarizarse con Git y detectar problemas de uso.
 Corrección y Evaluación:
 
@@ -16,8 +16,6 @@ Responsividad y UX:
 El producto debe ser full responsive, ofreciendo una experiencia de usuario intuitiva, ágil y accesible en todas las resoluciones.
 
 Buenas Prácticas:
-
-
 
 Requisitos Mínimos
 Header:
