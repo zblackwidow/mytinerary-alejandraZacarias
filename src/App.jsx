@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import Cities from "./Pages/Cities";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Standard from "./Layouts/Standard";
+import CitiesLayout from "./Layouts/CitiesLayout";
 
 const router = createBrowserRouter([
   {element: <Standard></Standard>,
@@ -10,7 +11,12 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
     ]
   },
-  { path: "/cities", element: <Cities /> },
+  {
+    element: <CitiesLayout></CitiesLayout>,
+    children: [
+      { path: "/cities", element: <Cities /> },
+    ]
+  } 
 ]);
 
 function App() {

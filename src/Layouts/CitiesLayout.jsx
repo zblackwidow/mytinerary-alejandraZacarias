@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-export default function Standard() {
+export default function DetailsLayout() {
   return (
     <>
       <Outlet />
-    </>
-  );
+    </> 
+  )
 }
