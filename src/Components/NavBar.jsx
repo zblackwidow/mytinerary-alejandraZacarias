@@ -57,7 +57,7 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
-        <ul className="flex max-[740px]:hidden font-serif gap-6 text-white items-center">
+        <ul className="flex max-[740px]:hidden font-serif gap-6 text-white text-xl items-center">
           {routes.map((route, index) => (
             <li className="hover:text-pink-400" key={index}>
               <NavLink

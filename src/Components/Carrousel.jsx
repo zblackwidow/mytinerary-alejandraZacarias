@@ -56,7 +56,7 @@ export default function Carrousel() {
         <Slice {...settings}>
           {images.map((d) => (
             <div
-              className="bg-black bg-opacity-80 rounded-xl mb-10 "
+              className="bg-slate-800  rounded-xl mb-10 "
               key={d.id}
             >
               <div className="h-56 flex justify-stretch rounded-t-xl items-center">

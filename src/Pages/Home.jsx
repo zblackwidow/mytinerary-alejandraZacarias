@@ -1,4 +1,3 @@
-import React from "react";
 import Footer from "../Components/Footer";
 import Carrousel from "../Components/Carrousel";
 import Navbar from "../Components/NavBar";
@@ -9,21 +8,20 @@ import AboutUs from "../Components/AboutUs";
 export default function Home() {
   return (
     <>
-      <main
-        className=" bg-no-repeat bg-cover bg-fixed bg-center"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1499063078284-f78f7d89616a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
-        }}
-      >
+      <div className=" bg-no-repeat bg-cover bg-local bg-center h-[100vh] bg-[url('https://images.unsplash.com/photo-1499063078284-f78f7d89616a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
+      
         <Navbar></Navbar>
         <Hero></Hero>
+      </div>
+      <div className=" flex items-center justify-center">
+      <div className=" bg-slate-600 w-[90%] h-auto rounded-b-3xl flex flex-col items-center justify-center mb-40">
         <Space></Space>
         <Carrousel></Carrousel>
         <Space></Space>
         <AboutUs></AboutUs>
-        <Footer></Footer>
-      </main>
+      </div>
+      </div>
+      <Footer></Footer>
     </>
   );
 }

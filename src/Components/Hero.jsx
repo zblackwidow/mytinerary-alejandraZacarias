@@ -7,7 +7,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="h-[60vh] w-[98vw] pl-4 sm:h-[75vh]  flex items-end justify-around">
+    <div className="h-[85vh] w-[97vw] pl-4 sm:h-[82vh]  flex items-end justify-around">
       <div className=" text-white items-start flex flex-col gap-4">
         <span className="font-serif text-5xl ">FLY FOR</span>
         <span className="text-7xl font-serif italic text-blue-500 font-light">
