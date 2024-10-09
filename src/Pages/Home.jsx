@@ -14,7 +14,7 @@ export default function Home() {
         <Hero></Hero>
       </div>
       <div className=" flex items-center justify-center">
-      <div className=" bg-slate-600 w-[90%] h-auto rounded-b-3xl flex flex-col items-center justify-center mb-40">
+      <div className=" bg-pink-100 w-[90%] h-auto rounded-b-3xl flex flex-col items-center justify-center mb-40">
         <Space></Space>
         <Carrousel></Carrousel>
         <Space></Space>
