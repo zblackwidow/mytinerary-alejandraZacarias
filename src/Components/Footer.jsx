@@ -1,11 +1,8 @@
-// import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <>
-      {/* 
-       */}
-       
+           
 
 <footer className="bg-white dark:bg-gray-900">
     <div className="mx-auto w-full max-w-screen-3xl">
@@ -114,30 +111,4 @@ export default function Footer() {
   );
 }
 
-{
-  /* <div>
-<p classNameName="text-xl font-bold md:m-0 mb-8 text-white">MyTinerary</p>
-<ul classNameName="flex gap-8 text-xl ">
-  <li classNameName="hover:text-pink-400">
-  <Link to="/cities">Cities</Link>
-  </li>
-  <li classNameName="hover:text-pink-400">
-    <Link  to="/">Home</Link>
-  </li>
-</ul>
-</div>
-<div>
-<p classNameName="text-xl font-bold">Follow us</p>
-<ul classNameName="flex gap-4 text-xl">
-  <li classNameName="hover:text-pink-400">
-    <Link to="/">Instagram</Link>
-  </li>
-  <li className="hover:text-pink-400">
-   <Link to="/">Facebook</Link>
-  </li>
-  <li className="hover:text-pink-400">
-    <Link to="/">Twitter</Link>
-  </li>
-</ul>
-</div> */
-}
+
