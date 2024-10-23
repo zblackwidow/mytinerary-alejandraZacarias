@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="h-[40vh] text-white bg-slate-950">
+      <footer className="h-[40vh] text-white bg-[#0E1C25]">
         {/* flex-col flex md:flex-row justify-around items-center */}
+       
         <div
           id="contendorPadre"
           className="flex flex-col h-auto md:flex-row border-2 border-red-500"

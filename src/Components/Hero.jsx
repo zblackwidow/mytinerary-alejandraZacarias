@@ -19,21 +19,24 @@ export default function Hero() {
         <span className="text-7xl">TO FLYING</span>
       </div>
       <div className=" flex flex-col gap-3 items-end max-[1030px]:hidden">
-        <span className="flex items-center text-3xl mb-5 font-normal font-sans">
+        <span className="flex items-center text-3xl mb-5 font-semibold font-sans">
           Find your
         </span>
-        <span className="mx-3 font-sans text-5xl text-blue-400 animate-bounce">
+        <span className="mx-3 font-sans text-5xl  text-blue-200 animate-bounce">
           perfect trip
         </span>
         <span className="flex items-center text-2xl mb-5 font-light font-mono">
           designed by insiders who
-          <span className="text-white mx-3 bg-black"> know and love </span>
+          <span className="text-white mx-3 bg-black italic">
+            
+            know and love
+          </span>
           their cities!
         </span>
 
         <button
           onClick={() => handleClick()}
-          className="bg-white w-1/3 text-black hover:text-white font-bold hover:bg-sky-600 rounded-3xl p-4"
+          className="bg-white w-28 py-3 text-black hover:text-white font-bold hover:bg-sky-600 rounded-3xl "
         >
           Explore
         </button>
