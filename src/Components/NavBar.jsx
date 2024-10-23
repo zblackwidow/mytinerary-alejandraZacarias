@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const routes = [
   { to: "/", text: "Home" },
   { to: "/cities", text: "Cities" },
+  {to:"/city", text:"City"}
 ];
 
 export default function NavBar() {
@@ -13,7 +14,7 @@ export default function NavBar() {
   };
   return (
     <>
-      <nav className="bg-transparent text-lg h-[9vh] flex justify-around text-white items-center">
+      <nav className=" text-lg h-[9vh] flex justify-around text-white items-center  ">
         <div className="flex items-center">
           <Link to="/">
             <img
@@ -32,14 +33,14 @@ export default function NavBar() {
           <div className="h-1 w-5 bg-white mb-1"></div>
         </button>
         <div
-          className={`absolute w-full text-xl bg-black bg-opacity-30 transition-transform ${
-            isOpen ? "translate-y-28" : "-translate-y-full"
+          className={`absolute w-full text-xl bg-black h-[22vh] bg-opacity-80 transition-transform ${
+            isOpen ? "translate-y-36" : "-translate-y-full"
           } md:hidden`}
         >
-          <ul className="flex items-center flex-col text-white p-4">
+          <ul className="flex items-center flex-col text-white h-auto">
             {routes.map((route, index) => (
               <li
-                className="hover:border-2 hover:px-8 p-2  hover:text-pink-400"
+                className="hover:border-b-2 hover:px-8 h-[5vh] p-4  hover:text-pink-400"
                 key={index}
               >
                 <NavLink
@@ -52,12 +53,12 @@ export default function NavBar() {
                 </NavLink>
               </li>
             ))}
-            <li className="py-2 hover:border-2 hover:px-8 hover:text-pink-400">
-              <a href="#">Login</a>
+            <li className="py-4 hover:border-b-2 hover:px-8 hover:text-pink-300 ">
+              <Link to="/">Login</Link>
             </li>
           </ul>
         </div>
-        <ul className="flex max-[740px]:hidden font-serif gap-6 text-white items-center">
+        <ul className="flex max-[740px]:hidden font-serif gap-6 text-white text-xl items-center">
           {routes.map((route, index) => (
             <li className="hover:text-pink-400" key={index}>
               <NavLink
