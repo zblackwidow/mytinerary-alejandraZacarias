@@ -1,21 +1,44 @@
-// import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-// function ItineraryList({ itineraries }) {
-//     return (
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-//             {itineraries.map(itinerary => (
-//                 <div key={itinerary._id} className="border p-4 rounded shadow-lg bg-white">
-//                     <img src={itinerary.Image} alt={itinerary.name} className="w-full h-48 object-cover rounded-md mb-4" />
-//                     <h2 className="text-xl font-semibold mb-2">{itinerary.name}</h2>
-//                     <p className="text-gray-600 mb-2">{itinerary.description}</p>
-//                     <p className="text-gray-500 mb-4">Price: {itinerary.price} {itinerary.currency}</p>
-//                     <Link to={`/itineraries/${itinerary._id}`} className="text-blue-500 hover:underline">
-//                         View Details
-//                     </Link>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// }
+function ItineraryList() {
+    const [itineraries, setItineraries] = useState([]);
 
-// export default ItineraryList;
+    useEffect(() => {
+        axios.get('http://localhost:5050/api/itinerary/all')
+            .then(response => {
+                setItineraries(response.data.res); // Asume que los itinerarios están en response.data.res
+            })
+            .catch(error => {
+                console.error("Error al cargar los itinerarios:", error);
+            });
+    }, []);
+
+    return (
+       
+        <div >
+           
+            {itineraries.length > 0 ? (
+                <div className='flex flex-wrap justify-center'>
+                    {itineraries.map(itinerary => (
+                         <div className="max-w-sm md:w-[30vw] mt-4 rounded overflow-hidden shadow-lg bg-white bg-opacity-80 mx-auto" key={itinerary._id}>
+                            <img src={itinerary.Image} alt={itinerary.name} className="w-full h-48 object-cover"  />
+                            <div className="px-6 py-4">
+                            <h2 className='text-xl font-semibold'>{itinerary.name}</h2>
+                            <p>{itinerary.description}</p>
+                            <p>City: {itinerary.city}</p>
+                            <p>Duration: {itinerary.duration} hours</p>
+                            
+                            </div>
+                          
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <p>Charging itineraries...</p>
+            )}
+        </div>
+    );
+}
+
+export default ItineraryList;
