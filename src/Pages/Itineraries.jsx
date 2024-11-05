@@ -1,6 +1,6 @@
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
-import Itineraries from "../Components/itineraries/Itineraries";
+import Itineraries from "../Components/itineraries/ItinerariesCards";
 
 export default function Cities() {
     return (

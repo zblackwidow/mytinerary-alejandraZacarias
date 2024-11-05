@@ -30,6 +30,7 @@ function CityDetail() {
             <p className="text-gray-700 my-4">{city.descripsion}</p>
             
             <div className="text-gray-500">
+
                 <p><strong>Population:</strong> {city.population}</p>
                 <p><strong>Currency:</strong> {city.currency}</p>
                 <p><strong>Languages:</strong> {city.languages}</p>
@@ -37,6 +38,7 @@ function CityDetail() {
             </div>
             <Link to={`/itinerary/id/${city._id}`} className="bg-slate-400 p-2 rounded text-white text-center">
                     See Itineraries
+
                 </Link>
         </div>
     );

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function CityCard({ city }) {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white bg-opacity-80 mx-auto">
             <img 
-                className="w-full h-48 object-cover" // Ajusta la imagen para que sea proporcional
+                className="w-full h-48 object-cover" 
                 src={city.image} 
                 alt={city.name} 
             />
@@ -21,10 +22,18 @@ function CityCard({ city }) {
                     className="bg-slate-400 py-2 px-4 rounded text-white text-center w-3/4"
                 >
                     See more
-                </Link>
+                </Link> 
             </div>
         </div>
     );
 }
+CityCard.propTypes = {
+    city: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        descripcion: PropTypes.string,
+        image: PropTypes.string.isRequired,
+        _id: PropTypes.string.isRequired,
+    }).isRequired,
+};
 
 export default CityCard;

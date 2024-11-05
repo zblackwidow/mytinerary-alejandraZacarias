@@ -8,6 +8,7 @@ import CitiesLayout from "./Layouts/CitiesLayout";
 import Itineraries from "./Pages/Itineraries";
 import ItineraryDetails from "./Pages/ItineraryDetail";
 
+
 const router = createBrowserRouter([
   {element: <Standard></Standard>,
     children: [
