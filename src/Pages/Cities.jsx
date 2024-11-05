@@ -1,7 +1,7 @@
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
-import Loading from "../Components/Loading";
 import Seach from "../Components/Seach";
+import CitiesList from "../Components/CitiesList";
 
 export default function Cities() {
   return (
@@ -14,23 +14,16 @@ export default function Cities() {
         }}
       >
         <NavBar></NavBar>
-        <div className="w-full md:h-[80vh] flex flex-col items-center justify-center">
-        <div className=" flex flex-col items-center text-white justify-center">
-          <h1 className="text-center text-4xl font-bold">Cities</h1>
-          <Seach></Seach>
-        </div>
-        
-        <div className="w-[85vw] h-full my-4 items-center flex flex-wrap text-white justify-center">
-          <Loading></Loading>
-          <Loading></Loading>
-          <Loading></Loading>
-          <Loading></Loading>
-          <Loading></Loading>
-          <Loading></Loading>
-          <Loading></Loading>
-          <Loading></Loading>
-          <Loading></Loading>
-        </div>
+        <div className=" flex flex-col items-center justify-center">
+          <div className=" flex flex-col items-center text-white justify-center">
+            <h1 className="text-center text-4xl font-bold">Cities</h1>
+            <Seach></Seach>
+          </div>
+
+          <div className="w-[85vw] h-full my-4 items-center flex flex-wrap text-white justify-center">
+
+            <CitiesList></CitiesList>
+          </div>
         </div>
         <Footer></Footer>
       </main>

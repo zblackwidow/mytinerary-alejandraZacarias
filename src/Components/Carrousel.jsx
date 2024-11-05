@@ -177,19 +177,19 @@ const images = [
   },
   {
     name: "Cordoba, Argentina",
-    url: "https://www.travel-assets.com/images/articles/cordoba-argentina-cordoba-argentina-tourism-guide-travel-tips-pictures-photos-cor.jpg",
+    url: "https://www.argentinfo.com.ar/wp-content/uploads/2023/08/calamuchita.jpg",
     descripcion:
       "A city with a rich history, contemporary art and a vibrant nightlife.",
     id: 13
   },{
     name: "Santiago, Chile",
-    url: "https://www.travel-assets.com/images/articles/santiago-chile-santiago-chile-tourism-guide-travel-tips-pictures-photos-cor.jpg",
+    url: "https://www.argentinfo.com.ar/wp-content/uploads/2023/08/calamuchita.jpg  ",
     descripcion:
       "A city with a rich history, contemporary art and a vibrant nightlife.",
     id: 14
   },{
     name: "Quito, Ecuador",
-    url: "https://www.travel-assets.com/images/articles/quito-ecuador-quito-ecuador-tourism-guide-travel-tips-pictures-photos-cor.jpg",
+    url: "https://ecpe2k7qe53.exactdn.com/wp-content/uploads/2020/01/410A3DA6-3D43-4479-BE3E-7049A99C8132-scaled.jpeg?strip=all&lossy=1&ssl=1",
     descripcion:
       "A city with a rich history, contemporary art and a vibrant nightlife.",
     id: 15
