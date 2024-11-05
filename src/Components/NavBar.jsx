@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const routes = [
   { to: "/", text: "Home" },
   { to: "/cities", text: "Cities" },
-  {to:"/city", text:"City"}
+  { to: "/itinerary", text: "Itinerary" }
 ];
 
 export default function NavBar() {
