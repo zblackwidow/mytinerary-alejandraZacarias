@@ -5,7 +5,6 @@ import  CityDetails from "./Pages/CityDetails";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Standard from "./Layouts/Standard";
 import CitiesLayout from "./Layouts/CitiesLayout";
-
 import Itineraries from "./Pages/Itineraries";
 import ItineraryDetails from "./Pages/ItineraryDetail";
 
@@ -21,7 +20,6 @@ const router = createBrowserRouter([
     children: [
       { path: "/cities", element: <Cities /> },
       { path: "/cities/:id", element: <CityDetails /> },
-
       { path: "/itineraries", element: <Itineraries /> },
       { path: "/itinerary/:id", element: <ItineraryDetails/> },
     ]
