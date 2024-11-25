@@ -1,12 +1,10 @@
 
 
 function LocationSearch() {
-
-
     return (
         <>
             <div className="flex rounded-md border-2 border-[#f396dc] overflow-hidden max-w-md mx-auto font-[sans-serif] my-3">
-                <input type="email" placeholder="Search Something..."
+                <input type="text" placeholder="Search Something..."
                     className="w-full outline-none bg-white text-gray-600 text-sm px-4 py-3" />
                 <button type='button' className="flex items-center justify-center bg-[#f396dc] px-5">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px" className="fill-white">
@@ -17,7 +15,6 @@ function LocationSearch() {
                 </button>
             </div>
         </>
-
     );
 }
 

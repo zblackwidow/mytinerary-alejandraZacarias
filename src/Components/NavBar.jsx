@@ -3,9 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const routes = [
   { to: "/", text: "Home" },
-  { to: "/cities", text: "Cities" },
-
-  { to: "/itineraries", text: "Itineraries" }
+  { to: "/cities", text: "Cities" }
 
 ];
 

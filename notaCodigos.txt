@@ -1,0 +1,12 @@
+useEffect(() => {
+        axios.get(`http://localhost:5050/api/cities/name/${name}`)
+            .then(response => {
+                setCity(response.data.res); // Asegúrate de que response.data.res contenga los datos de la ciudad
+            })
+            .catch(error => {
+                console.error("Error al cargar la ciudad:", error);
+            });
+    }, [name]);
+
+
+    filtrar por nombre de ciudades 
