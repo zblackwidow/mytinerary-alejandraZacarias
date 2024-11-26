@@ -1,7 +1,7 @@
 
 export default function Loading() {
   return (
-    <div className="shadow rounded-md p-4 my-2 max-w-sm w-full mx-auto">
+    <div className=" shadow rounded-md p-4 my-2 mx-8  w-[20vw]">
       <div className="animate-pulse flex space-x-4">
         <div className=" bg-slate-800 h-20 w-20"></div>
         <div className="flex-1 space-y-6 py-1">

@@ -1,10 +1,12 @@
+import  { useState } from 'react';
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import Seach from "../Components/Seach";
 import CitiesList from "../Components/CitiesList";
 
 export default function Cities() {
-  return (
+  const [searchText, setSearchText] = useState('');
+    return (
     <>
       <main
         className="bg-no-repeat bg-cover bg-fixed bg-center"
@@ -17,12 +19,12 @@ export default function Cities() {
         <div className=" flex flex-col items-center justify-center">
           <div className=" flex flex-col items-center text-white justify-center">
             <h1 className="text-center text-4xl font-bold">Cities</h1>
-            <Seach></Seach>
+            <Seach setSearchText={setSearchText} ></Seach>
           </div>
 
           <div className="w-[85vw] h-full my-4 items-center flex flex-wrap text-white justify-center">
 
-            <CitiesList></CitiesList>
+            <CitiesList searchText={searchText || ''}></CitiesList>
           </div>
         </div>
         <Footer></Footer>
